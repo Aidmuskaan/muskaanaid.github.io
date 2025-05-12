@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muskaan Aid - A newly forming NGO dedicated to helping underprivileged children in India with menstrual health and education support">
+  <title>Muskaan Aid - Coming Soon to Make a Difference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #f857a6;
+      --secondary: #ff5858;
+      --accent: #d04c5b;
+      --light: #fff9f9;
+      --dark: #333;
+      --text: #444;
+      --highlight: #f1a501;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://drive.google.com/uc?export=view&id=1_dgiAXC_CHbQWgtrMQEZDnl9zyywVnKx') center/cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    
+    header .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    
+    .section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    
+    .section h2 {
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--highlight);
+      border-radius: 2px;
+    }
+    
+    .section p, .section ul {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    
+    .section ul {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+    
+    .section ul li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .section ul li::before {
+      content: "\f058";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--highlight);
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+    
+    .btn-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 10px;
+      background: var(--secondary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 88, 88, 0.3);
+    }
+    
+    .btn:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 88, 88, 0.4);
+    }
+    
+    .btn i {
+      margin-right: 8px;
+    }
+    
+    footer {
+      background: linear-gradient(to right, #2c3e50, #4a6491);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: var(--highlight);
+    }
+    
+    .emotional-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      margin: 60px auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-top: 5px solid var(--highlight);
+      max-width: 900px;
+    }
+    
+    .emotional-box h3 {
+      color: var(--highlight);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    
+    img.full-width {
+      width: 100%;
+      height: auto;
+      margin: 40px 0;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      object-fit: cover;
+      max-height: 500px;
+    }
+    
+    .upcoming-event {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 30px;
+      border-radius: 10px;
+      margin: 40px 0;
+      border-left: 5px solid var(--accent);
+    }
+    
+    .upcoming-event h3 {
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    
+    .event-thumbnail {
+      width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .event-thumbnail:hover {
+      transform: scale(1.02);
+    }
+    
+    .testimonial {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      font-style: italic;
+      position: relative;
+    }
+    
+    .testimonial::before {
+      content: "\f10d";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      font-size: 60px;
+      color: rgba(241, 165, 1, 0.1);
+      top: 10px;
+      left: 20px;
+      z-index: 0;
+    }
+    
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-author {
+      margin-top: 20px;
+      font-weight: 600;
+      color: var(--accent);
+      font-style: normal;
+    }
+    
+    .donation-impact {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 40px 0;
+    }
+    
+    .impact-item {
+      text-align: center;
+      padding: 25px;
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .impact-item i {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section {
+        padding: 50px 20px;
+      }
+      
+      .section h2 {
+        font-size: 2rem;
+      }
+      
+      .btn {
+        padding: 12px 25px;
+        margin: 8px;
+      }
+      
+      .donation-impact {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Muskaan Aid</h1>
+      <p>Preparing to Make a Difference Across India</p>
+      <div class="btn-container">
+        <a href="#donate" class="btn"><i class="fas fa-hand-holding-heart"></i> Support Our Cause</a>
+        <a href="#volunteer" class="btn"><i class="fas fa-hands-helping"></i> Become a Volunteer</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="section about">
+    <h2>Our Beginning</h2>
+    <p>Muskaan Aid is a newly forming NGO based in India, with a vision to support underprivileged children, especially young girls. Our organization is preparing to launch its first initiatives in June 2025.</p>
+    
+    <img 
+      class="full-width" 
+      src="https://drive.google.com/uc?export=view&id=1_OCiGbSnqGSY3LKegjHaDlwO-YlwXnh7" 
+      alt="Underprivileged children in India who need our support" 
+      loading="lazy"
+    >
+    
+    <p>We recognized that many young girls across India suffer silently from period pain without access to basic relief. At the same time, countless children lack proper school supplies. Muskaan Aid was born from the desire to address these fundamental needs with dignity and care.</p>
+  </div>
+
+  <div class="section mission">
+    <h2>Our Mission</h2>
+    <p>Our focus areas will include:</p>
+    <ul>
+      <li>Providing menstrual comfort through electric hot water pads</li>
+      <li>Distributing essential school supplies to underprivileged children</li>
+      <li>Conducting health and hygiene awareness programs</li>
+      <li>Organizing seasonal aid (winter clothes, rain gear, etc.)</li>
+      <li>Building a network of compassionate volunteers</li>
+    </ul>
+    
+    <img 
+      class="full-width" 
+      src="https://drive.google.com/uc?export=view&id=1iebmjm2dayKIiQnbdbEhQa9TJ_jakUKi" 
+      alt="Girls in classroom - future beneficiaries of our programs" 
+      loading="lazy"
+    >
+  </div>
+
+  <div class="section" id="upcoming">
+    <h2>Upcoming Initiative</h2>
+    
+    <div class="upcoming-event">
+      <h3>First Distribution Drive: June 11, 2025</h3>
+      <p>We're excited to announce our inaugural project - distributing 100 electric hot water bags to girls in government schools. This will help provide relief from menstrual pain and allow them to attend school comfortably.</p>
+      
+      <img
+        class="event-thumbnail"
+        src="https://drive.google.com/uc?export=view&id=1lDwS5qZtDNQE_tXthyPQWYGR3me5a8-G"
+        alt="Preparing for our first distribution drive"
+        loading="lazy"
+      >
+      
+      <p>We're currently identifying schools with the greatest need and preparing our distribution plan. Volunteers will be needed for:</p>
+      <ul>
+        <li>Pre-distribution surveys</li>
+        <li>Packing and organizing supplies</li>
+        <li>On-ground distribution</li>
+        <li>Documentation and follow-up</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="emotional-box">
+    <h3>Why This Matters</h3>
+    <p>Across India, many young girls miss school days every month due to period pain. Simple solutions like hot water bags can make a dramatic difference in their education and future opportunities.</p>
+    <p>Similarly, countless bright students struggle without basic notebooks or proper uniforms. Your support can help break these barriers and give children the tools they need to succeed.</p>
+  </section>
+
+  <div class="section" id="donate">
+    <h2>How You Can Help</h2>
+    
+    <div class="donation-impact">
+      <div class="impact-item">
+        <i class="fas fa-gift"></i>
+        <h3>Donate Supplies</h3>
+        <p>Contribute hot water bags, school kits, or hygiene products</p>
+      </div>
+      <div class="impact-item">
+        <i class="fas fa-rupee-sign"></i>
+        <h3>Financial Support</h3>
+        <p>Help us purchase supplies in bulk at discounted rates</p>
+      </div>
+      <div class="impact-item">
+        <i class="fas fa-hands"></i>
+        <h3>Volunteer</h3>
+        <p>Join our distribution teams or awareness programs</p>
+      </div>
+    </div>
+    
+    <div class="btn-container">
+      <a href="donate.html" class="btn"><i class="fas fa-donate"></i> Donate Now</a>
+      <a href="#volunteer" class="btn"><i class="fas fa-user-plus"></i> Volunteer Registration</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="testimonial">
+      <div class="testimonial-content">
+        "The best way to find yourself is to lose yourself in the service of others."
+      </div>
+      <div class="testimonial-author">- Mahatma Gandhi</div>
+    </div>
+  </div>
+
+  <div class="section" id="volunteer">
+    <h2>Join Our Movement</h2>
+    <p>As we prepare for our June launch, we're building our team of volunteers and supporters. Whether you can contribute time, skills, or resources, your involvement will help shape Muskaan Aid's impact.</p>
+    
+    <div class="btn-container">
+      <a href="https://wa.me/918000043994" class="btn"><i class="fab fa-whatsapp"></i> Chat With Us</a>
+      <a href="https://docs.google.com/forms/d/1CQWUfJxBoOFwGoYdbuUZv-QR4gMsWvzCwtGuryCsODQ/edit?pli=1" class="btn"><i class="fas fa-users"></i> Volunteer Form</a>
+      <a href="mailto:aidmuskaan@gmail.com" class="btn"><i class="fas fa-lightbulb"></i> Share Ideas</a>
+    </div>
+  </div>
+
+  <footer>
+    <h3>Connect With Muskaan Aid</h3>
+    <p>Help us bring our vision to life</p>
+    
+    <div style="margin: 25px 0;">
+      <a href="https://www.instagram.com/muskaanaid.org_?igsh=MW5sdjQ5YmluMThkNg==" target="_blank" style="margin: 0 15px;"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="mailto:aidmuskaan@gmail.com" style="margin: 0 15px;"><i class="fas fa-envelope fa-lg"></i></a>
+      <a href="https://wa.me/918000043994" style="margin: 0 15px;"><i class="fab fa-whatsapp fa-lg"></i></a>
+    </div>
+    
+    <div style="margin: 20px 0;">
+      <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Dadabari, Kota, Rajasthan - 324009</p>
+      <p><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> +91 80000 43994</p>
+      <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> aidmuskaan@gmail.com</p>
+    </div>
+    
+    <p>Website coming soon at: <strong>www.muskaanaid.org</strong></p>
+    <p style="margin-top: 30px;">&copy; 2025 Muskaan Aid. A compassionate initiative in formation.</p>
+  </footer>
+</body>
+</html>
